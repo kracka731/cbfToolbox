@@ -46,6 +46,8 @@ class Point(Shape):
             ax.plot(x[0], x[1],self.marker,color=color,mew=3)
         elif len(x) == 3:
             ax.plot3D([x[0]],[x[1]],[x[2]],color=color, marker=self.marker)
+        elif len(x) == 1: 
+            ax.plot(x[0], 0,self.marker,color=color,mew=3)
 
 class Ellipsoid(Shape):
     def __init__(self, axes, rotation=None, invert=False, degrees=True):
